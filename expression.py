@@ -223,11 +223,11 @@ def resolution(clauses):
     for c1,c2 in pairs:
         # check whether there are complimentary literals in pair
         if(c1[0].intersection(c2[1]) or c1[1].intersection(c2[0])):
-            pos = c1[0].union(c2[0])
-            neg = c1[1].union(c2[1])
+            pos_ = c1[0].union(c2[0])
+            neg_ = c1[1].union(c2[1])
             # remove complimentary literals
-            neg = neg.difference(pos)
-            pos = pos.difference(neg)
+            neg = neg_.difference(pos_)
+            pos = pos_.difference(neg_)
         # if we can produce empty clause, then initial formula is unsatisfiable
             if len(pos) == 0 and len(neg) == 0:
                 return 'no'

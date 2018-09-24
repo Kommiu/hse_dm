@@ -14,7 +14,7 @@ if __name__ == '__main__':
         print(f'CNF of {str(p)}:')
         print(cnf)
         print('Is formula satisfiable?')
-        print(e.resolution(clauses))
+        print(e.resolution(clauses),'\n')
 
 else:
     s = '(a->d2<->0)//\~v\//1'
